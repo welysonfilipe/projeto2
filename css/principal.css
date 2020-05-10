@@ -1,0 +1,307 @@
+body,html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 30px;
+    overflow-x: hidden;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+  
+.image-size{
+    width: 800px;
+    height: 400px;
+    position: absolute;
+    right: -225px;
+
+}
+.image-logo{
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    left: 120px;
+    margin-top: 35px;
+}
+.menu {
+    transition: all 1s cubic-bezier(.325, 1, .22, 1);
+    width: 100%;
+}
+.menu ul {
+    float: right;
+}
+.menu ul li{
+    font-weight: 700;
+    font-size: 16px;
+    padding: 0px 15px;
+    display:inline-block;
+    text-align: right;
+    padding-bottom: 80px;
+    margin-top: 35px;
+ }   
+.menu ul li a{
+    color: hsl(230, 29%, 20%);
+}
+
+.login a{
+    color: hsl(230, 11%, 40%) !important; 
+  
+}
+
+.title {
+    font-weight: 700;
+    font-size: 42px;
+    color: hsl(230, 29%, 20%);
+    
+}
+
+p {
+    font-weight: 400;
+    font-size: 18px;
+    color:hsl(230, 11%, 40%);
+    padding-bottom: 10%;
+    margin-top: 8%;
+}
+
+.new{
+    font-weight: 400;
+    font-size: 24px;
+    background-color: hsl(230, 29%, 20%);
+    color:  hsl(207, 33%, 95%); 
+    margin-top: 20%;
+    padding: 2px 15px; 
+    border-radius: 15px;
+}
+h3{
+    font-weight: 400;
+    font-size: 18px;
+    color: hsl(231, 7%, 65%);
+}
+
+h2{
+    font-weight: 400;
+    font-size: 24px;
+    background: transparent;
+    color: hsl(231, 7%, 65%);
+}
+.conteudo {
+    margin-top: 70px;
+}
+.image{
+    margin-top: 30px;
+}
+.demo{
+    font-weight: 700;
+    font-size: 18px;
+    background-color: hsl(0, 100%, 68%);
+    color: hsl(207, 33%, 95%);
+    padding: 5px 15px; 
+    
+}
+.relative{
+    position: relative;
+}
+.color{
+    background-color:  hsl(207, 33%, 95%);
+    width: 50%;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -9;
+    -webkit-border-bottom-left-radius: 50px;
+    -moz-border-radius-bottomleft: 50px;
+    border-bottom-left-radius: 50px;
+   
+}
+.hamburger {
+    display: none;
+}
+@media (max-width:1023px) {
+    .conteudo {
+        width: 100%;
+        margin-top: 600px;
+        text-align: center;
+    }
+    .image-size {
+        width: 120%;
+        top: 150px;
+        height: 400px;
+    }
+    .new{
+        font-size: 44px;
+    }
+    h2{
+        font-size: 44px;
+    }
+    .title {
+        font-size: 60px;
+    }
+    p {
+        font-size: 36px;
+    }
+    .demo{
+        font-size: 36px;
+    }
+    h3{
+        font-size: 36px;
+    }
+    .menu {
+        width: 100%;
+        margin-bottom: 20px;
+        position: relative;
+    }
+    .menu ul {
+        width: 100%;
+        margin: 20px 0 0;
+        max-height: 0px;
+        overflow: hidden;
+        list-style: none;
+        z-index: 99;
+        position: absolute;
+    }
+    .menu ul li{
+        font-size: 22px;
+        display: block;
+        margin: 0;
+        text-align: center;
+        width: 100%;
+        background: #fff;
+        border-bottom: 1px solid  hsl(230, 11%, 40%) !important;
+        padding: 20px 0;
+    }   
+    .menu ul li a{
+        color: hsl(230, 29%, 20%);
+    }
+
+    .login a{
+        color: hsl(230, 11%, 40%) !important; 
+    
+    }
+    .color{
+        top: 0;
+        right: -55px;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 40px;
+        right: 13px;
+        height: 27px;
+        width: 27px;
+        cursor: pointer;
+        transition: all 1s cubic-bezier(.19, 1, .22, 1);
+    }
+        
+    .line {
+        position: absolute;
+        display: block;
+        background: #3d3d3d;
+        width: 18px;
+        height: .15rem;
+        border-radius: .2rem;
+        left: 0;
+        transition: all .6s cubic-bezier(.5, .1, 0, 1.2);
+    }
+        
+    .line-1 {
+        top: 0;
+    }
+        
+    .line-2 {
+        top: 7px;
+        width: 14px;
+        transform: translateX(2px);
+        -webkit-transform: translateX(2px);
+    }
+        
+    .line-3 {
+        top: 14px;
+    }
+    
+    input[type=checkbox]:checked ~ label .line-1 {
+        top: 0px;
+        width: 22px;
+        transform: translateX(-11px) rotate(-45deg) translateY(12px);
+    }
+        
+    input[type=checkbox]:checked ~ label .line-2 {
+        opacity: 0;
+    }
+        
+    input[type=checkbox]:checked ~ label .line-3 {
+        top: 14px;
+        width: 22px;
+        transform: translateX(-8px) rotate(45deg) translateY(-8px);
+    }
+
+    input[type=checkbox]:checked ~ .menu ul {
+        height: auto;
+        max-height: 50rem;
+        transition: all 1s cubic-bezier(.5, 1, .22, 1);
+        margin-top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+@media (max-width:767px)  {
+    .conteudo {
+        width: 100%;
+        margin-top: 600px;
+        text-align: center;
+        margin-top: 450px;
+    }
+    
+    .image-size {
+        width: 160%;
+        top: 120px;
+        height: 260px;
+    }
+    .new{
+        font-size: 18px;
+    }
+    h2{
+        font-size: 18px;
+    }
+    .title {
+        font-size: 24px;
+    }
+    p {
+        font-size: 16px;
+    }
+    .demo{
+        font-size: 18px;
+    }
+    h3{
+        font-size: 18px;
+    }
+    .menu ul li{
+        font-size: 12px;
+    }   
+    .menu ul li a{
+        color: hsl(230, 29%, 20%);
+    }
+
+    .login a{
+        color: hsl(230, 11%, 40%) !important; 
+    
+    }
+    .color{
+        top: 0;
+        right: 10px;
+    }
+    .image-logo{
+        width: 30px;
+        height: 25px;
+        left: 30px;
+    }
+
+    input[type=checkbox]:checked ~ .menu ul {
+        transform: translateX(-55%);
+    }
+}
+   
